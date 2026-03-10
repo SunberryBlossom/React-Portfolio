@@ -4,8 +4,7 @@ import ExperienceArticle from '../ExperienceArticle/ExperienceArticle.jsx';
 export default function ExperienceSection () {
     return (
         <>
-        <h2
-            classList={styles}>
+        <h2>
             Experience
         </h2>
         <ExperienceArticle

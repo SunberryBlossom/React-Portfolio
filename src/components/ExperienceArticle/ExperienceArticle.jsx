@@ -3,7 +3,7 @@ import styles from './ExperienceArticle.module.css';
 export default function ExperienceArticle ({timeline, title, subtitle, text}) {
     return (
         <>
-        <div classList={styles.experienceGraph}>
+        <div className={styles.experienceGraph}>
             <p>
                 {timeline}
             </p>

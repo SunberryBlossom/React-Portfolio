@@ -3,7 +3,7 @@ import SkillCard from '../SkillCard/SkillCard';
 
 export default function SkillSection () {
     return (
-        <section classList={styles.SkillSection}>
+        <section className={styles.SkillSection}>
             <h2>My Current Skillset</h2>
             <div>
                 <SkillCard skillName="HTML 5" />

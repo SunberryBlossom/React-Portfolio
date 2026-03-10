@@ -3,7 +3,7 @@ import styles from './AboutSection.module.css';
 export default function AboutSection () {
     return (
         <>
-            <h1 classList={styles.h1}>
+            <h1 className={styles.h1}>
                 About Vira
             </h1>
             <p>

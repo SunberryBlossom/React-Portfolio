@@ -3,7 +3,7 @@ import Button from '../Button/Button.jsx'
 
 export default function ContactSection () {
     return (
-        <section classList={styles.section}>
+        <section className={styles.section}>
             <h2>
                 Get in touch with me!
             </h2>

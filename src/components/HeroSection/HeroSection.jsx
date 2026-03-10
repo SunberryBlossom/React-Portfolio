@@ -3,7 +3,7 @@ import Button from '../Button/Button.jsx'
 
 export default function HeroSection () {
     return (
-        <section classList={styles.section}>
+        <section className={styles.section}>
             <div>
                 <img />
             </div>

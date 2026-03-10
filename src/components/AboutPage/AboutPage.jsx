@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer.jsx'
 export default function AboutPage () {
     return (
         <>
-        <Header classList={styles} />
+        <Header />
         <AboutSection />
         <ExperienceSection />
         <Footer />

@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar.jsx'
 
 export default function Header () {
     return (
-        <header classList={styles.header}>
+        <header className={styles.header}>
             <img />
             <Navbar />
         </header>
