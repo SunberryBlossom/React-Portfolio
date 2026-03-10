@@ -1,4 +1,4 @@
-import styles from 'HeroSection.module.css';
+import styles from './HeroSection.module.css';
 import Button from '../Button/Button.jsx'
 
 export default function HeroSection () {
