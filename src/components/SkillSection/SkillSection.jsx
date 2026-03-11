@@ -12,7 +12,7 @@ export default function SkillSection () {
                 <SkillCard skillName="React" icon={['fab', 'react']} iconStyle={{ color: 'rgb(94, 211, 243)' }} />
                 <SkillCard skillName="C# | .NET" icon={['fas', 'code']} iconStyle={{ color: 'rgb(167, 108, 225)' }} />
                 <SkillCard skillName="MS SQL Server" icon={['fas', 'database']} iconStyle={{ color: 'rgb(49, 100, 140)' }} />
-                <SkillCard skillName="PostGreSQL" icon={['fas', 'database']} iconStyle={{ color: 'rgb(49, 100, 140)' }} />
+                <SkillCard skillName="PostGres" icon={['fas', 'database']} iconStyle={{ color: 'rgb(49, 100, 140)' }} />
                 <SkillCard skillName="Docker" icon={['fab', 'docker']} iconStyle={{ color: 'rgb(19, 83, 210)' }} />
                 <SkillCard skillName="Git VCS" icon={['fab', 'git-alt']} iconStyle={{ color: 'rgb(232, 77, 49)' }} />
                 <SkillCard skillName="REST API" icon={['fas', 'server']} iconStyle={{ color: 'rgb(95, 94, 94)' }} />
