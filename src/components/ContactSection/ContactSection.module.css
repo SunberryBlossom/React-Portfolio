@@ -1,0 +1,26 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    color: var(--ink);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.h2 {
+    display: inline-block;
+}
+
+.button {
+    width: 170px;
+    padding: 10px;
+}
