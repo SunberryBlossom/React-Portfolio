@@ -1,0 +1,14 @@
+.footer {
+    padding: 20px 0 10px;
+    text-align: center;
+}
+
+.footer::before {
+    content: "";
+    border-top: 1px solid var(--primary-accent-color);
+    display: block;
+    width: 90vw;
+    position: relative;
+    left: 5vw;
+    top: -7px;
+}
