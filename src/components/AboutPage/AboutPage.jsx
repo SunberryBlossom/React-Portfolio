@@ -1,4 +1,3 @@
-import styles from './AboutPage.module.css';
 import Header from '../Header/Header.jsx'
 import AboutSection from '../AboutSection/AboutSection.jsx'
 import ExperienceSection from '../ExperienceSection/ExperienceSection.jsx'
