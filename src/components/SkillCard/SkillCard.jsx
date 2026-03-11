@@ -10,11 +10,15 @@ library.add(fas, far, fab)
 
 export default function SkillCard ({skillName, icon, iconStyle}) {
     return (
-        <div className={styles.div}>
-            <h3 className={styles.h3}>
-                {skillName}
-            </h3>
-            <FontAwesomeIcon icon={icon} style={iconStyle} />
-        </div>
+            <div className={styles.skillCard}>
+                <h3 className={styles.h3}>
+                    {skillName}
+                </h3>
+                <FontAwesomeIcon
+                    className={styles.iconSize}
+                    icon={icon}
+                    style={iconStyle}
+                />
+            </div>
     )
 }
