@@ -9,9 +9,11 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fas, far, fab)
 
 
-export default function Button ({ text ="default text", icon }) {
+export default function Button ({ text, icon, style }) {
     return (
-        <button className={styles.button}>
+        <button
+            className={styles.button}
+            style={style}>
             <FontAwesomeIcon icon={icon} />
             {text}
         </button>
