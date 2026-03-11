@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar.jsx'
 export default function Header () {
     return (
         <header className={styles.header}>
-            <img />
+            <img  src="src/assets//coin_icon.png" />
             <Navbar />
         </header>
     )
