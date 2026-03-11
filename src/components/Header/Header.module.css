@@ -12,8 +12,12 @@
     padding-bottom: 10px;
 }
 
-.img {
+.logoContainer {
     width: 15%;
+}
+
+.img {
+    width: 100%;
     border-radius: 50%;
     border: 1px solid transparent;
     transition: all 0.8s ease-in-out;
@@ -22,4 +26,14 @@
 
 .img:hover {
     cursor: pointer;
+}
+
+.darkmodeImg {
+    box-shadow: -3px 3px 4px var(--secondary-accent-color);
+    filter: brightness(1.2) contrast(1.1);
+    border: none;
+}
+
+.logoText {
+    display: none;
 }
