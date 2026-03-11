@@ -5,7 +5,7 @@ export default function HeroSection () {
     return (
         <section className={styles.section}>
             <div>
-                <img />
+                <img src="src/assets/hero-image.png" />
             </div>
             <h1>
                 Mae Govannen! Call me Vira
