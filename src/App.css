@@ -77,3 +77,14 @@ h1, h2, h3 {
     outline-offset: 3px;
     border-radius: 10px;
 }
+
+.navbar::before,
+.footer::before {
+    content: "";
+    border-top: 1px solid var(--primary-accent-color);
+    display: block;
+    width: 90vw;
+    position: relative;
+    left: 5vw;
+    top: -7px;
+}
