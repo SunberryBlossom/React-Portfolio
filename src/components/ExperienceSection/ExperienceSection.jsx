@@ -3,8 +3,8 @@ import ExperienceArticle from '../ExperienceArticle/ExperienceArticle.jsx';
 
 export default function ExperienceSection () {
     return (
-        <>
-        <h2>
+        <section className={styles.section}>
+        <h2 className={styles.h2}>
             Experience
         </h2>
         <ExperienceArticle
@@ -17,6 +17,6 @@ export default function ExperienceSection () {
             title="Prep work"
             subtitle="FreeCodeCamp & Microsoft Learn"
         />
-        </>
+        </section>
     )
 }
