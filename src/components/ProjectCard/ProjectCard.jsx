@@ -1,11 +1,13 @@
+import styles from './ProjectCard.module.css'
 
-export default function ProjectCard ({title, subtitle}) {
+
+export default function ProjectCard ({title, subtitle, image}) {
     return (
-        <button>
-            <img />
-            <div>
-                <h2>{title}</h2>
-                <h3>{subtitle}</h3>
+        <button className={styles.card}>
+            <img src={image} className={styles.img} />
+            <div className={styles.content}>
+                <h2 className={styles.h2}>{title}</h2>
+                <p className={styles.p}>{subtitle}</p>
             </div>
         </button>
     )
