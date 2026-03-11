@@ -1,4 +1,4 @@
-import './Button.module.css';
+import styles from './Button.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
@@ -11,7 +11,7 @@ library.add(fas, far, fab)
 
 export default function Button ({ text ="default text", icon }) {
     return (
-        <button>
+        <button className={styles.button}>
             <FontAwesomeIcon icon={icon} />
             {text}
         </button>
