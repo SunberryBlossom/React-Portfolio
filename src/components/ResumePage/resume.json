@@ -1,0 +1,98 @@
+{
+    "english" : {
+        "header" : {
+            "name" : "Elvira R. Mariesdotter",
+            "personal info" : [
+                "Stockholm, Sweden",
+                "(+46) 709-421-135",
+                "wooden_anemone@pm.me",
+                "www.linkedin.com/in/elviramariesdotter",
+                "https://sunberryblossom.github.io/Portfolio/",
+                "www.github.com/SunberryBlossom"
+            ]
+        },
+        "profile" : {
+            "title" : "profile",
+            "text" : "Ambitious .NET student at Chas Academy with a focus on clean code, well planned architecture and Agile work. Proven track record of leading development teams and representing peer interests at the board level. Passionate about building robust, secure, maintainable, and scalable software."
+        },
+        "education" : [
+            {
+                "title" : "Fullstack Developer in .NET & C#",
+                "subtitle" : "Chas Academy, Stockholm",
+                "period" : "June 2027"
+            },
+            {
+                "title" : "Foundational C#",
+                "subtitle" : "Microsoft Learn & FreeCodeCamp",
+                "period" : "July 2025"
+            },
+            {
+                "title" : "Specialist degree with a major in Neurology",
+                "subtitle" : "Fysioterapeuterna",
+                "period" : "November 2023"
+            },
+            {
+                "title" : "MSc in clinical science and physical therapy",
+                "subtitle" : "Karolinska Institute",
+                "period" : "January 2021"
+            },
+            {
+                "title" : "Cert. Physical Therapist",
+                "subtitle" : "Karolinska Institute",
+                "period" : "June 2018"
+            }
+        ],
+        "work experience" : [
+            {
+                "title" : "SCRUM Master & Fullstack Developer",
+                "subtitle" : "Munilytics (Collaborative Project), Stockholm",
+                "period" : "2026 - Present",
+                "text" : [
+                    "Acting as SCRUM Master and developer in a team of 5 peers to develop an application I designed after reading Kleppmann’s book on data-intensive application.",
+                    "Developing a ROLAP software with a data warehouse and a multidimensional cube to handle BI-queries on data from the KOLADA-API, capable of handling 10-20 million rows of data whilst delivering responses within a few seconds.",
+                    "Utilized Vertical Slice Architecture, Fastendpoints and Wolverine mediator in the backend, REACT and tailwind in the frontend."
+                ]
+            },
+            {
+                "title" : "Team Manager & Fullstack Developer",
+                "subtitle" : "Lords Of Arda (Collaborative Project), Stockholm",
+                "period" : "2025",
+                "text" : [
+                    "Led a team of 5–7 developers through the intensive development phase of a textbased RPG, managing the transition from concept to functional demo.",
+                    "Facilitated Agile ceremonies, including weekly retrospectives and standups, to maintain team velocity and ensure alignment between the Scrum Master and the development team.",
+                    "Contributed as a fullstack developer in a shared codebase, managing Git workflows, code reviews, and resolving complex merge conflicts to maintain repository health."
+                ]
+            },
+            {
+                "title" : "Class Representative",
+                "subtitle" : "Chas Academy, Stockholm",
+                "period" : "2025 - present",
+                "text" : [
+                    "Elected spokesperson for the NET25 class, acting as the primary liaison between students and the board of education.",
+                    "Collaborating with industry representatives to ensure the curriculum remains aligned with current .NET framework trends and recruiter requirements."
+                ]
+            },
+            {
+                "title" : "Developer & Creator",
+                "subtitle" : "The seer, GitHub / independent project",
+                "period" : "2024 - present",
+                "text" : [
+                    "Re-engineered a legacy single-loop program into professional N-tier architecture using OOP principles, demonstrating a deep understanding of separation of concerns and maintainable software design.",
+                    "Implemented a Code First approach with Entity Framework Core for data persistence (3NF) and integrated a secure authentication system using PBKDF2 hashing for user-specific data and journaling.",
+                    "Managed the full development lifecycle by utilizing UML and ER diagrams to ensure structural integrity and normalized database schemas before implementation, showcasing a disciplined approach to professional development."
+                ]
+            },
+            {
+                "title" : "Physical Therapist, specialised in neurosurgical healthcare",
+                "subtitle" : "Karolinska University Hospital",
+                "period" : "2017 - 2025",
+                "text" : [
+                    "Worked in a highly specialised field with acute care as a respiratory and physical therapist.",
+                    "Gained more responsibility over the wards, sections and teams over the years, ending my career as educator, mentor, teacher and fully responsible for the cervical department of physical therapy.",
+                    "Worked off-campus at other clinics when the need was present, showing high skills in adaptability and quick learning.",
+                    "Simultaneously worked in clinical research from 2018 to 2025 at the institute, both at Solna and Huddinge campus."
+                ]
+            }
+        ]
+    }
+}
