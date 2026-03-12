@@ -1,0 +1,190 @@
+.title {
+    text-align: center;
+    color: var(--ink);
+    grid-area: title;
+}
+
+.img {
+    width: 100%;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    grid-area: image;
+}
+
+.resume {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: var(--ink);
+    justify-items: center;
+    gap: 30px;
+    display: grid;
+    grid-template-areas:
+        "title"
+        "header"
+        "profile"
+        "education"
+        "work";
+}
+
+.resume li {
+    list-style: none;
+}
+
+.header {
+    grid-area: intro;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+    margin-bottom: 20px;
+    grid-area: header;
+}
+
+.headerList {
+    margin-top: 20px;
+}
+
+.headerTitle {
+    font-size: 1.5rem;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.h2 {
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 30px;
+}
+
+.headerSubtitle {
+    position: absolute;
+    font-size: .8rem;
+    top: 30px;
+    opacity: 0.8;
+}
+
+.headerTextContainer {
+    position: relative;
+}
+
+.profile {
+    grid-area: profile;
+}
+
+.education {
+    grid-area: education;
+}
+
+.educationContainer, .workContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.educationGridItem {
+    display: grid;
+    grid-template-areas:
+    "title title"
+    "subtitle period";
+}
+
+.educationTitle {
+    grid-area: title;
+    font-size: 1.2rem;
+}
+
+.educationSubtitle {
+    grid-area: subtitle;
+}
+
+.educationPeriod {
+    grid-area: period;
+    justify-self: end;
+}
+
+.work {
+    grid-area: work;
+}
+
+.workGridItem {
+    display: grid;
+    grid-template-areas:
+    "title"
+    "subtitle"
+    "period"
+    "text";
+}
+
+.workTitle {
+    grid-area: title;
+    text-align: center;
+}
+
+.workSubtitle {
+    grid-area: subtitle;
+    text-align: center;
+}
+
+.workPeriod {
+    grid-area: period;
+    text-align: center;
+}
+
+.workText {
+    margin-top: 20px;
+    grid-area: text;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.atsSection {
+    background-color: var(--secondary-color);
+    color: var(--secondary-accent-color);
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.atsSection h2 {
+    padding-bottom: 20px;
+}
+
+.atsSection div:first-child {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.atsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+
+.contactSection {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.contactButtonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contactTitle {
+    font-size: 1.2rem;
+    color: var(--ink);
+}
