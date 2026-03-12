@@ -2,6 +2,7 @@
     "english" : {
         "header" : {
             "name" : "Elvira R. Mariesdotter",
+            "subtitle" : "System Developer",
             "personal info" : [
                 "Stockholm, Sweden",
                 "(+46) 709-421-135",
@@ -98,6 +99,7 @@
     "swedish" : {
         "header" : {
             "name" : "Elvira R. Mariesdotter",
+            "subtitle" : "systemutvecklare",
             "personal info" : [
                 "Stockholm, Sverige",
                 "(+46) 709-421-135",
