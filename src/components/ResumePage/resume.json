@@ -94,5 +94,101 @@
                 ]
             }
         ]
+    },
+    "swedish" : {
+        "header" : {
+            "name" : "Elvira R. Mariesdotter",
+            "personal info" : [
+                "Stockholm, Sverige",
+                "(+46) 709-421-135",
+                "wooden_anemone@pm.me",
+                "www.linkedin.com/in/elviramariesdotter",
+                "https://sunberryblossom.github.io/Portfolio/",
+                "www.github.com/SunberryBlossom"
+            ]
+        },
+        "profile" : {
+            "title" : "profil",
+            "text" : "Ambitiös .NET-student på Chas Academy med fokus på clean code, välplanerad arkitektur och agilt arbete. Bevisad erfarenhet av att leda utvecklingsteam och representera klassintressen på styrelsenivå. Passionerad inför att bygga robust, säker, underhållbar och skalbar programvara."
+        },
+        "education" : [
+            {
+                "title" : "Fullstackutvecklare i .NET & C#",
+                "subtitle" : "Chas Academy, Stockholm",
+                "period" : "Juni 2027"
+            },
+            {
+                "title" : "Grundläggande C#",
+                "subtitle" : "Microsoft Learn & FreeCodeCamp",
+                "period" : "Juli 2025"
+            },
+            {
+                "title" : "Specialistexamen med inriktning neurologi",
+                "subtitle" : "Fysioterapeuterna",
+                "period" : "November 2023"
+            },
+            {
+                "title" : "Masterexamen i klinisk vetenskap och fysioterapi",
+                "subtitle" : "Karolinska Institutet",
+                "period" : "Januari 2021"
+            },
+            {
+                "title" : "Leg. Fysioterapeut",
+                "subtitle" : "Karolinska Institutet",
+                "period" : "Juni 2018"
+            }
+        ],
+        "work experience" : [
+            {
+                "title" : "SCRUM Master & Fullstackutvecklare",
+                "subtitle" : "Munilytics (Samarbetsprojekt), Stockholm",
+                "period" : "2026 - Nuvarande",
+                "text" : [
+                    "Agerar som SCRUM Master och utvecklare i ett team om 5 kollegor för att utveckla en applikation jag designade efter att ha läst Kleppmanns bok om dataintensiva applikationer.",
+                    "Utvecklar en ROLAP-mjukvara med ett datalager och en flerdimensionell kub för att hantera BI-frågor på data från KOLADA-API:et, kapabel att hantera 10–20 miljoner rader data och leverera svar inom några sekunder.",
+                    "Använde Vertical Slice Architecture, Fastendpoints och Wolverine-mediatorn i backend, REACT och Tailwind i frontend."
+                ]
+            },
+            {
+                "title" : "Teamledare & Fullstackutvecklare",
+                "subtitle" : "Lords Of Arda (Samarbetsprojekt), Stockholm",
+                "period" : "2025",
+                "text" : [
+                    "Ledde ett team om 5–7 utvecklare genom den intensiva utvecklingsfasen av ett textbaserat RPG och hanterade övergången från koncept till fungerande demo.",
+                    "Faciliterade agila ceremonier, inklusive veckovisa retrospektiv och standups, för att upprätthålla teamets tempo och säkerställa samstämmighet mellan Scrum Master och utvecklingsteamet.",
+                    "Bidrog som fullstackutvecklare i en gemensam kodbas, hanterade Git-arbetsflöden, kodgranskningar och löste komplexa sammanslagningskonflikter för att upprätthålla repositoriets hälsa."
+                ]
+            },
+            {
+                "title" : "Klassrepresentant",
+                "subtitle" : "Chas Academy, Stockholm",
+                "period" : "2025 - nuvarande",
+                "text" : [
+                    "Vald talesperson för NET25-klassen och agerar som primär länk mellan studenter och utbildningsstyrelsen.",
+                    "Samarbetar med branschrepresentanter för att säkerställa att läroplanen är i linje med aktuella .NET-ramverkstrender och rekryterarkrav."
+                ]
+            },
+            {
+                "title" : "Utvecklare & Skapare",
+                "subtitle" : "The seer, GitHub / självständigt projekt",
+                "period" : "2024 - nuvarande",
+                "text" : [
+                    "Omstrukturerade ett äldre single loop-program till professionell N-lagers-arkitektur med hjälp av OOP-principer, vilket demonstrerar en djup förståelse för separation av ansvar och underhållbar programvarudesign.",
+                    "Implementerade ett Code First-tillvägagångssätt med Entity Framework Core för datapersistens (3NF) och integrerade ett säkert autentiseringssystem med PBKDF2-hashning för användarspecifik data och journalföring.",
+                    "Hanterade hela utvecklingscykeln genom att använda UML- och ER-diagram för att säkerställa strukturell integritet och normaliserade databasscheman före implementering, vilket visar ett disciplinerat förhållningssätt till professionell utveckling."
+                ]
+            },
+            {
+                "title" : "Fysioterapeut, specialiserad inom neurokirurgisk vård",
+                "subtitle" : "Karolinska Universitetssjukhuset",
+                "period" : "2017 - 2025",
+                "text" : [
+                    "Arbetade inom ett högt specialiserat område med akutvård som andnings- och fysioterapeut.",
+                    "Fick successivt mer ansvar över avdelningar, sektioner och team under åren, och avslutade min karriär som utbildare, mentor, lärare och fullt ansvarig för fysioterapins cervikalavdelning.",
+                    "Arbetade på andra kliniker utanför campus vid behov, vilket visade på hög förmåga till anpassning och snabbt lärande.",
+                    "Arbetade samtidigt med klinisk forskning från 2018 till 2025 vid institutet, både på Solna- och Huddingecampus."
+                ]
+            }
+        ]
     }
 }
