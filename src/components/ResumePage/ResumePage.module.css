@@ -161,7 +161,7 @@
 .atsContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     padding-bottom: 20px;
     justify-content: center;
 }
