@@ -89,6 +89,15 @@ export default function ResumePage () {
                     </div>
                 </article>
             </section>
+            <section className={styles.atsSection}>
+                <div>
+                    <h2>ATS-friendly resumes</h2>
+                    <div className={styles.atsContainer}>
+                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)"}} icon="fa-solid fa-briefcase" text="EN version" />
+                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)"}} icon="fa-solid fa-briefcase" text="SW version" />
+                    </div>
+                </div>
+            </section>
             <Footer />
         </>
     )
