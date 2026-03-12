@@ -33,16 +33,16 @@ export default function ResumePage () {
                         }
                     </ul>
                 </article>
-                <article>
-                    <h2>
+                <article className={styles.profile}>
+                    <h2 className={styles.h2}>
                         {data.profile.title}
                     </h2>
                     <p>
                         {data.profile.text}
                     </p>
                 </article>
-                <article>
-                    <h2>
+                <article className={styles.education}>
+                    <h2 className={styles.h2}>
                         education
                     </h2>
                     <div>
@@ -61,8 +61,8 @@ export default function ResumePage () {
                         ))}
                     </div>
                 </article>
-                <article>
-                    <h2>
+                <article className={styles.work}>
+                    <h2 className={styles.h2}>
                         work experience
                     </h2>
                     <div>
