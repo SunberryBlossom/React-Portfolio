@@ -65,19 +65,19 @@ export default function ResumePage () {
                     <h2 className={styles.h2}>
                         work experience
                     </h2>
-                    <div>
+                    <div className={styles.workContainer}>
                         {data["work experience"].map((work, index) => (
-                            <div key={index}>
-                                <h3>
+                            <div className={styles.workGridItem} key={index}>
+                                <h3 className={styles.workTitle}>
                                     {work.title}
                                 </h3>
-                                <h4>
+                                <h4 className={styles.workSubtitle}>
                                     {work.subtitle}
                                 </h4>
-                                <p>
+                                <p className={styles.workPeriod}>
                                     {work.period}
                                 </p>
-                                <ul>
+                                <ul className={styles.workText}>
                                     {work.text.map((text, index) => (
                                         <li key={index}>
                                             {text}

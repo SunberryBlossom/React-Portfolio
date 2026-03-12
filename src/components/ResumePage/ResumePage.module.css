@@ -53,6 +53,7 @@
 
 .h2 {
     border-bottom: 1px solid var(--ink);
+    margin-bottom: 30px;
 }
 
 .headerSubtitle {
@@ -73,7 +74,7 @@
     grid-area: education;
 }
 
-.educationContainer {
+.educationContainer, .workContainer {
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -102,4 +103,37 @@
 
 .work {
     grid-area: work;
+}
+
+.workGridItem {
+    display: grid;
+    grid-template-areas:
+    "title"
+    "subtitle"
+    "period"
+    "text";
+}
+
+.workTitle {
+    grid-area: title;
+    text-align: center;
+}
+
+.workSubtitle {
+    grid-area: subtitle;
+    text-align: center;
+}
+
+.workPeriod {
+    grid-area: period;
+    text-align: center;
+}
+
+.workText {
+    margin-top: 20px;
+    grid-area: text;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
