@@ -60,6 +60,7 @@
     position: absolute;
     font-size: .8rem;
     top: 30px;
+    opacity: 0.8;
 }
 
 .headerTextContainer {
@@ -164,4 +165,26 @@
     gap: 20px;
     padding-bottom: 20px;
     justify-content: center;
+}
+
+.contactSection {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.contactButtonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contactTitle {
+    font-size: 1.2rem;
+    color: var(--ink);
 }

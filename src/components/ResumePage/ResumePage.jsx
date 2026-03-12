@@ -98,6 +98,16 @@ export default function ResumePage () {
                     </div>
                 </div>
             </section>
+            <section className={styles.contactSection}>
+                <h2 className={styles.contactTitle}>
+                        Want to start something great?
+                </h2 >
+                <div className={styles.contactButtonContainer}>
+                    <Button text=" Phone me!" icon="fa-solid fa-phone" />
+                    <Button text=" DM me!" icon="fa-solid fa-comment" />
+                    <Button text=" Email me!" icon="fa-solid fa-envelope" />
+                </div>
+            </section>
             <Footer />
         </>
     )
