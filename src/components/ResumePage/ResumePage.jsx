@@ -45,16 +45,16 @@ export default function ResumePage () {
                     <h2 className={styles.h2}>
                         education
                     </h2>
-                    <div>
+                    <div className={styles.educationContainer}>
                         {data.education.map((education, index) => (
-                            <div key={index}>
-                                <h3>
+                            <div className={styles.educationGridItem} key={index}>
+                                <h3 className={styles.educationTitle}>
                                     {education.title}
                                 </h3>
-                                <h4>
+                                <h4 className={styles.educationSubtitle}>
                                     {education.subtitle}
                                 </h4>
-                                <p>
+                                <p className={styles.educationPeriod}>
                                     {education.period}
                                 </p>
                             </div>

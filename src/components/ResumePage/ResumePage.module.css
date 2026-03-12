@@ -52,7 +52,7 @@
 }
 
 .h2 {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--ink);
 }
 
 .headerSubtitle {
@@ -71,6 +71,33 @@
 
 .education {
     grid-area: education;
+}
+
+.educationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.educationGridItem {
+    display: grid;
+    grid-template-areas:
+    "title title"
+    "subtitle period";
+}
+
+.educationTitle {
+    grid-area: title;
+    font-size: 1.2rem;
+}
+
+.educationSubtitle {
+    grid-area: subtitle;
+}
+
+.educationPeriod {
+    grid-area: period;
+    justify-self: end;
 }
 
 .work {
