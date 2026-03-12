@@ -2,6 +2,7 @@ import Header from "../Header/Header";
 import Button from "../Button/Button";
 import Footer from "../Footer/Footer";
 import Resume from "./resume.json";
+import styles from "./ResumePage.module.css";
 
 export default function ResumePage () {
     const data = Resume.english;
@@ -9,24 +10,28 @@ export default function ResumePage () {
     return (
         <>
             <Header />
-            <section>
-                <h1>
+            <section className={styles.resume}>
+                <h1 className={styles.title}>
                     {data.profile.title == "profile" ? "Resume" : "CV"}
                 </h1>
-                <article>
-                    <img src="src/assets/resume-image.jpeg" />
-                    <h2>
-                        {data.header.name}
-                    </h2>
-                    <h3>
-                        {data.header.subtitle}
-                    </h3>
-                    <p>
+                <article className={styles.header}>
+                    <img className={styles.img} src="src/assets/resume-image.jpeg" />
+                    <div className={styles.headerTextContainer}>
+                        <h2 className={styles.headerTitle}>
+                            {data.header.name}
+                        </h2>
+                        <h3 className={styles.headerSubtitle}>
+                            {data.header.subtitle}
+                        </h3>
+                    </div>
+                    <ul className={styles.headerList}>
                         {
                             data.header["personal info"]
-                            .map( v => `${v} | ` )
+                            .map( v => (
+                                <li>{v}</li>
+                            ))
                         }
-                    </p>
+                    </ul>
                 </article>
                 <article>
                     <h2>

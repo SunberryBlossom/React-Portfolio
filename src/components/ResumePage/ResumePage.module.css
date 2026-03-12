@@ -1,0 +1,60 @@
+.title {
+    text-align: center;
+    color: var(--ink);
+}
+
+.img {
+    width: 100%;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    grid-area: image;
+}
+
+.resume {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: var(--ink);
+    justify-items: center;
+    display: grid;
+    grid-template-areas:
+        "image"
+        "intro"
+        "summary"
+        "skills"
+        "education"
+        "work";
+}
+
+.resume li {
+    list-style: none;
+}
+
+.header {
+    grid-area: intro;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.headerList {
+    margin-top: 20px;
+}
+
+.headerTitle {
+    font-size: 1.5rem;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.headerSubtitle {
+    position: absolute;
+    font-size: .8rem;
+    top: 30px;
+}
+
+.headerTextContainer {
+    position: relative;
+}
