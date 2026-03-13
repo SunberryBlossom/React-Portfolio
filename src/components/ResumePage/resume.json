@@ -4,12 +4,35 @@
             "name" : "Elvira R. Mariesdotter",
             "subtitle" : "System Developer",
             "personal info" : [
-                "Stockholm, Sweden",
-                "(+46) 709-421-135",
-                "wooden_anemone@pm.me",
-                "www.linkedin.com/in/elviramariesdotter",
-                "https://sunberryblossom.github.io/Portfolio/",
-                "www.github.com/SunberryBlossom"
+                {
+                    "content" : "Stockholm, Sweden",
+                    "isLink" : false
+                },
+                {
+                    "content" : "(+46) 709-421-135",
+                    "isLink" : true,
+                    "link" : "tel:+46709421135"
+                },
+                {
+                    "content" : "wooden_anemone@pm.me",
+                    "isLink" : true,
+                    "link" : "mailto:wooden_anemone@pm.me"
+                },
+                {
+                    "content" : "linkedin.com/in/elviramariesdotter",
+                    "isLink" : true,
+                    "link" : "https://www.linkedin.com/in/elviramariesdotter"
+                },
+                {
+                    "content" : "sunberryblossom.github.io/Portfolio/",
+                    "isLink" : true,
+                    "link" : "https://www.sunberryblossom.github.io/Portfolio/"
+                },
+                {
+                    "content" : "github.com/SunberryBlossom",
+                    "isLink" : true,
+                    "link" : "https://www.github.com/SunberryBlossom"
+                }
             ]
         },
         "profile" : {
@@ -101,12 +124,35 @@
             "name" : "Elvira R. Mariesdotter",
             "subtitle" : "systemutvecklare",
             "personal info" : [
-                "Stockholm, Sverige",
-                "(+46) 709-421-135",
-                "wooden_anemone@pm.me",
-                "www.linkedin.com/in/elviramariesdotter",
-                "https://sunberryblossom.github.io/Portfolio/",
-                "www.github.com/SunberryBlossom"
+                {
+                    "content" : "Stockholm, Sverige",
+                    "isLink" : false
+                },
+                {
+                    "content" : "(+46) 709-421-135",
+                    "isLink" : true,
+                    "link" : "tel:+46709421135"
+                },
+                {
+                    "content" : "wooden_anemone@pm.me",
+                    "isLink" : true,
+                    "link" : "mailto:wooden_anemone@pm.me"
+                },
+                {
+                    "content" : "linkedin.com/in/elviramariesdotter",
+                    "isLink" : true,
+                    "link" : "https://www.linkedin.com/in/elviramariesdotter"
+                },
+                {
+                    "content" : "sunberryblossom.github.io/Portfolio/",
+                    "isLink" : true,
+                    "link" : "https://www.sunberryblossom.github.io/Portfolio/"
+                },
+                {
+                    "content" : "github.com/SunberryBlossom",
+                    "isLink" : true,
+                    "link" : "https://www.github.com/SunberryBlossom"
+                }
             ]
         },
         "profile" : {

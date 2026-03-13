@@ -67,7 +67,7 @@ export default function PortfolioPage () {
                 document.body
             )}
             <Header />
-            <section className={styles.section1}>
+            <section id="main-content" className={styles.section1}>
                 <h1>
                     Featured Projects
                 </h1>

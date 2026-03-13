@@ -24,7 +24,6 @@ export default function Header () {
                     alt="Toggle color theme"
                     onClick={toggleTheme}
                 />
-                <p className={styles.logoText}>E.R. Mariesdotter</p>
             </div>
             <Navbar />
         </header>

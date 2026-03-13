@@ -2,7 +2,7 @@ import styles from './AboutSection.module.css';
 
 export default function AboutSection () {
     return (
-        <section className={styles.section}>
+        <section id="main-content" className={styles.section}>
             <article className={styles.container}>
                 <h1>
                     About Vira

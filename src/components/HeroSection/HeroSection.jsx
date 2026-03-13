@@ -6,7 +6,7 @@ export default function HeroSection () {
     const navigate = useNavigate();
 
     return (
-        <section className={styles.section}>
+        <section id="main-content" className={styles.section}>
             <div className={styles.imageSection}>
                 <div className={styles.imageContainer}>
                     <img className={styles.img} src="src/assets/hero-image.png" />

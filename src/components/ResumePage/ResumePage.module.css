@@ -30,6 +30,23 @@
     list-style: none;
 }
 
+.a {
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.a:hover {
+    color: var(--secondary-accent-color);
+    text-shadow: 0 0 2px currentColor, 0 0 2px currentColor;
+}
+
+.a:focus-visible, .a:focus {
+    color: var(--secondary-accent-color);
+    transition-duration: .2s;
+    outline: 2px solid var(--secondary-accent-color);
+    outline-offset: 3px;
+    border-radius: 5px;
+}
+
 .header {
     grid-area: intro;
     position: relative;

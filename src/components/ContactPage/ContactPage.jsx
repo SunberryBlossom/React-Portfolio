@@ -58,7 +58,7 @@ export default function ContactPage () {
     return (
         <>
             <Header />
-            <section className={Styles.mainSection}>
+            <section id="main-content" className={Styles.mainSection}>
                 <h1 className={Styles.h1}>
                     Get in touch
                 </h1>

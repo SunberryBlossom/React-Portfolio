@@ -12,7 +12,7 @@ export default function ResumePage () {
     return (
         <>
             <Header />
-            <section className={styles.resume}>
+            <section id="main-content" className={styles.resume}>
                 <h1 className={styles.title}>
                     {data.profile.title == "profile" ? "Resume" : "CV"}
                 </h1>
@@ -29,9 +29,13 @@ export default function ResumePage () {
                     <ul className={styles.headerList}>
                         {
                             data.header["personal info"]
-                            .map( v => (
-                                <li>{v}</li>
-                            ))
+                            .map((item) => {
+                                return (
+                                    <li>
+                                        {item.isLink ? <a className={styles.a} target="_blank" href={item.link}>{item.content}</a> : item.content}
+                                    </li>
+                                )
+                            })
                         }
                     </ul>
                 </article>
