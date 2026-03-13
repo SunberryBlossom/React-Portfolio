@@ -9,13 +9,24 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fas, far, fab)
 
 
-export default function Button ({ text, icon, style, type, id }) {
+export default function Button ({ text, icon, style, type, id, link, onClick }) {
+    const handleClick = (event) => {
+        if (onClick) {
+            onClick(event);
+        }
+
+        if (link) {
+            window.open(link, "_blank", "noopener,noreferrer");
+        }
+    };
+
     return (
         <button
-            type={type}
+            type={type ?? "button"}
             id={id}
             className={styles.button}
-            style={style}>
+            style={style}
+            onClick={handleClick}>
             <FontAwesomeIcon icon={icon} />
             {text}
         </button>

@@ -1,7 +1,10 @@
 import styles from './HeroSection.module.css';
 import Button from '../Button/Button.jsx'
+import { useNavigate } from 'react-router';
 
 export default function HeroSection () {
+    const navigate = useNavigate();
+
     return (
         <section className={styles.section}>
             <div className={styles.imageSection}>
@@ -17,6 +20,7 @@ export default function HeroSection () {
                 A .NET fullstack system developer based in Stockholm, Sweden, with an obsession for data-intensive applications.
             </p>
             <Button
+                onClick={() => navigate('/contact')}
                 text="Let us work together!"
             />
             </div>
