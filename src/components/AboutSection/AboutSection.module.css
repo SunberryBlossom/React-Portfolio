@@ -1,0 +1,34 @@
+
+.section {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: var(--ink);
+}
+
+.container {
+    padding: 20px;
+    text-align: justify;
+}
+
+.img {
+    width: 100%;
+}
+
+    @media screen and (min-width: 1024px) {
+        .section {
+        flex-direction: row;
+        padding: 10px;
+        align-items: center;
+        font-size: 1.7rem;
+        }
+
+        .img {
+        border-radius: 10px;
+        border: 1px solid var(--secondary-accent-color);
+        }
+
+        .container {
+        padding: 50px;
+    }
+    }

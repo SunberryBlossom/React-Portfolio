@@ -1,0 +1,98 @@
+.section {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0 10px;
+    margin-top: 15px;
+}
+
+.imageSection {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    width: 75vw;
+    max-width: 500px;
+    max-height: 500px;
+    height: 75vw;
+    border-radius: 50%;
+    background-color: var(--primary-accent-color);
+    position: relative;
+    top: 7%;
+}
+
+.img {
+    width: 99%;
+    transform: scale(1.1);
+    clip-path: ellipse(52% 50.4% at 50% 50%);
+    position: relative;
+    top: -38.6%;
+}
+
+
+.content {
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.h1 {
+    font-size: 1.7rem;
+}
+
+.p {
+    font-size: 1.1rem;
+}
+
+.section:hover span {
+        color: var(--secondary-accent-color);
+    }
+
+.section span {
+     transition: all 0.4s ease;
+}
+
+@media screen and (min-width: 1024px) {
+    .section {
+        display: grid;
+        grid-template-areas:
+            'text image'
+            'button image';
+        justify-items: center;
+        align-items: center;
+        height: 85vh;
+        padding: 25px 40px;
+    }
+
+    .imageContainer {
+        grid-area: image;
+    }
+
+    .content {
+        grid-area: text;
+    }
+
+    .content Button {
+        grid-area: button;
+        cursor: pointer;
+    }
+
+    .h1 {
+        font-size: 3rem;
+    }
+
+      .p {
+        font-size: 2rem;
+    }
+}
