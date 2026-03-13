@@ -3,9 +3,36 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Button from "../Button/Button";
 import styles from './PortfolioPage.module.css'
-import ProjectModal from "../ProjectModal/ProjectModal.jsx"
+import { useEffect, useState } from "react";
+import munilyticsCard from "../../assets/munilytics-card.png";
+import theSeerCard from "../../assets/the-seer-card.png";
+import slavaBankCard from "../../assets/slava-bank-card.png";
+import lordsOfArdaCard from "../../assets/lords-of-arda-card.jpg"
+import missingImage from "../../assets/missing-project-image.jpg"
 
 export default function PortfolioPage () {
+
+    const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    const imageByRepoName = {
+        "munilytics": munilyticsCard,
+        "the-seer": theSeerCard,
+        "slava-bank": slavaBankCard,
+        "lords-of-arda" : lordsOfArdaCard
+    };
+
+    useEffect(
+        () => {
+            fetch("https://api.github.com/users/SunberryBlossom/repos")
+            .then((result) => result.json())
+            .then((apiData) => setData(Array.isArray(apiData) ? apiData : []))
+            .catch(() => setData([]))
+            .finally(() => setIsLoading(false))
+        }
+        ,[]
+    )
+
 
     return (
         <>
@@ -19,23 +46,19 @@ export default function PortfolioPage () {
                     Click a card for more information.
                 </p>
                 <div className={styles.cardContainer}>
-                    <ProjectCard
-                        title="Munilytics"
-                        subtitle="Kolada-API based ROLAP"
-                        image="src/assets/munilytics-card.png"
-                        />
-                    <ProjectCard
-                        title="The Seer"
-                        subtitle="Console based fortune telling"
-                        image="src/assets/the-seer-card.png"
-
-                    />
-                    <ProjectCard
-                        title="Slava Bank"
-                        subtitle="Console based bank application"
-                        image="src/assets/slava-bank-card.png"
-
-                    />
+                    { isLoading ? (
+                        <div className={styles.loadingContainer}>
+                            <h2>Projects are being fetched...</h2>
+                        </div>
+                    ) : data.filter(repo => repo.name !== "SunberryBlossom").filter(repo => repo.name !== "Portfolio").map(repo => (
+                            <ProjectCard
+                                key={repo.id}
+                                title={String(repo.name).replaceAll("-", " ")}
+                                subtitle={repo.description}
+                                image={imageByRepoName[repo.name.toLowerCase()] ?? missingImage}
+                            />
+                        ))
+                    }
                 </div>
             </section>
             <section className={styles.section2}>
