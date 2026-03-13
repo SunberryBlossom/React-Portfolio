@@ -24,28 +24,43 @@ export default function PortfolioPage () {
     const infoByRepoName = {
         "munilytics":
             {
+                repoName: "Munilytics",
                 image : munilyticsCard,
                 text : "This ongoing project is built with me as SCRUM-master and developer with four class peers as a hobby project. My vision for Munilytics started after having read Kleppmann's book on data-intensive applications, and I wanted us to challenge ourselves by building something that was outside of our school curriculum. Munilytics is an Aspire orchestrated ASP.NET app with a data warehouse and a ROLAP on top of it. The data is extracted and synced with the KOLADA API."
             },
         "the-seer":
             {
+                repoName: "The-Seer",
                 image : theSeerCard,
                 text : "This solo hobby project is on its second version, structured with an N-tier architecture. The Seer is an interactive console application that let's you pick and choose different card decks (and other means like nordic runes) to get fortune tellings. These are logged locally in a Code-first written EF-Core database. The user can also write diary logs connected to their readings. This is my solo hobby project that I recreate in more technical versions alongside my studies, to push myself and implement what I learn. The next version is planned to be a web application to give graphic life to The Seer herself."
             },
         "slava-bank":
             {
+                repoName: "Slava-Bank",
                 image : slavaBankCard,
                 text : "This is my team's examination project from our fundamental C# course at Chas Academy. We built a bank-application with a completely new from-the-ground- up HTML/CSS mocking layout inside a console, instead of using Spectre Console or similar libraries."
             },
         "lords-of-arda" :
             {
+                repoName: "Lords-Of-Arda",
                 image : lordsOfArdaCard,
                 text : "The first ever collaborative project I ever participated in. Started out of my love for Tolkien. My biggest role in this was as Agile leader, leading standups, retros and making sure every peer that participated felt included and had a task to work on."
             }
     };
 
     const featuredRepoNames = Object.keys(infoByRepoName);
-    const featuredRepos = data.filter((repo) => featuredRepoNames.includes(String(repo.name).toLowerCase()));
+    const apiReposByName = new Map(data.map((repo) => [String(repo.name).toLowerCase(), repo]));
+    const featuredRepos = featuredRepoNames.map((repoKey) => {
+        const apiRepo = apiReposByName.get(repoKey);
+        const repoInfo = infoByRepoName[repoKey];
+
+        return apiRepo || {
+            id: repoKey,
+            name: repoInfo.repoName,
+            description: "",
+            html_url: `https://github.com/SunberryBlossom/${repoInfo.repoName}`,
+        };
+    });
     const selectedRepoInfo = infoByRepoName[String(selectedProject.name || "").toLowerCase()] || {};
 
     useEffect(
