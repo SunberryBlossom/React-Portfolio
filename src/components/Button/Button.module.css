@@ -13,11 +13,24 @@
     transition: all 0.4s ease;
 }
 
+.button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
   .button:hover {
         color: var(--secondary-accent-color);
         transform: translateY(-10px);
         box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
         cursor: pointer;
+    }
+
+    .button:disabled:hover {
+        color: whitesmoke;
+        transform: none;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
     }
 
     .button:active {
