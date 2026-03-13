@@ -7,7 +7,7 @@ export default function ProjectModal ({imageUrl, title, text, onClose, link}) {
         <div className={Styles.overlay} onClick={onClose}>
             <div className={Styles.modal} onClick={(event) => event.stopPropagation()}>
                 <div className={Styles.topSection}>
-                    <img className={Styles.img} src={imageUrl} />
+                    <img className={Styles.img} src={imageUrl} loading="lazy" decoding="async" />
                     <button onClick={onClose} className={Styles.closeButton}>+</button>
                 </div>
                 <div className={Styles.middleSection}>

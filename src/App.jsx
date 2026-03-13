@@ -1,10 +1,12 @@
+import { lazy, Suspense } from "react"
 import { HashRouter, Routes, Route } from "react-router"
-import HomePage from "./components/HomePage/HomePage.jsx"
-import AboutPage from "./components/AboutPage/AboutPage.jsx"
-import PortfolioPage from "./components/PortfolioPage/PortfolioPage.jsx"
-import ResumePage from "./components/ResumePage/ResumePage.jsx"
-import ContactPage from "./components/ContactPage/ContactPage.jsx"
 import './App.css'
+
+const HomePage = lazy(() => import("./components/HomePage/HomePage.jsx"))
+const AboutPage = lazy(() => import("./components/AboutPage/AboutPage.jsx"))
+const PortfolioPage = lazy(() => import("./components/PortfolioPage/PortfolioPage.jsx"))
+const ResumePage = lazy(() => import("./components/ResumePage/ResumePage.jsx"))
+const ContactPage = lazy(() => import("./components/ContactPage/ContactPage.jsx"))
 
 function skipToMain(e) {
   e.preventDefault();
@@ -20,13 +22,15 @@ function App() {
   return (
     <HashRouter>
       <a href="#main-content" className="skip-link" onClick={skipToMain}>Skip to main content</a>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/resume" element={<ResumePage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/resume" element={<ResumePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Suspense>
     </HashRouter>
   )
 }

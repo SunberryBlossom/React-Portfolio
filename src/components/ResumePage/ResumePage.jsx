@@ -6,6 +6,7 @@ import styles from "./ResumePage.module.css";
 import cvEnglish from "../../assets/cv-elvira-mariesdotter-eng.pdf";
 import cvSwedish from "../../assets/cv-elvira-mariesdotter-swe.pdf";
 import resumeImage from "../../assets/resume-image.jpeg";
+import { faBriefcase, faComment, faEnvelope, faLanguage, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 export default function ResumePage () {
@@ -37,13 +38,13 @@ export default function ResumePage () {
                     </h1>
                     <Button
                         text={labels.toggleLanguageButton}
-                        icon="fa-solid fa-language"
+                        icon={faLanguage}
                         style={{ padding: "8px 12px", fontSize: "0.9rem" }}
                         onClick={() => setLanguage(isEnglish ? "swedish" : "english")}
                     />
                 </div>
                 <article className={styles.header}>
-                    <img className={styles.img} src={resumeImage} />
+                    <img className={styles.img} src={resumeImage} loading="lazy" decoding="async" />
                     <div className={styles.headerTextContainer}>
                         <h2 className={styles.headerTitle}>
                             {data.header.name}
@@ -125,8 +126,8 @@ export default function ResumePage () {
                 <div>
                     <h2>{labels.atsFriendly}</h2>
                     <div className={styles.atsContainer}>
-                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon="fa-solid fa-briefcase" text={labels.atsEnglishButton} link={cvEnglish} />
-                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon="fa-solid fa-briefcase" text={labels.atsSwedishButton} link={cvSwedish} />
+                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon={faBriefcase} text={labels.atsEnglishButton} link={cvEnglish} />
+                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon={faBriefcase} text={labels.atsSwedishButton} link={cvSwedish} />
                     </div>
                 </div>
             </section>
@@ -135,9 +136,9 @@ export default function ResumePage () {
                         {labels.contactTitle}
                 </h2 >
                 <div className={styles.contactButtonContainer}>
-                    <Button text={labels.phoneMe} icon="fa-solid fa-phone" link="tel:+46709421135" />
-                    <Button text={labels.dmMe} icon="fa-solid fa-comment" link="https://www.linkedin.com/in/elviramariesdotter" />
-                    <Button text={labels.emailMe} icon="fa-solid fa-envelope" link="mailto:wooden_anemone@pm.me" />
+                    <Button text={labels.phoneMe} icon={faPhone} link="tel:+46709421135" />
+                    <Button text={labels.dmMe} icon={faComment} link="https://www.linkedin.com/in/elviramariesdotter" />
+                    <Button text={labels.emailMe} icon={faEnvelope} link="mailto:wooden_anemone@pm.me" />
                 </div>
             </section>
             <Footer />

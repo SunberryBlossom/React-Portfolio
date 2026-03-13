@@ -11,6 +11,7 @@ import lordsOfArdaCard from "../../assets/lords-of-arda-card.jpg"
 import missingImage from "../../assets/missing-project-image.jpg"
 import portfolioImage from "../../assets/portfolio-image.jpg";
 import { createPortal } from "react-dom";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ProjectModal from "../ProjectModal/ProjectModal";
 
 export default function PortfolioPage () {
@@ -43,6 +44,10 @@ export default function PortfolioPage () {
             }
     };
 
+    const featuredRepoNames = Object.keys(infoByRepoName);
+    const featuredRepos = data.filter((repo) => featuredRepoNames.includes(String(repo.name).toLowerCase()));
+    const selectedRepoInfo = infoByRepoName[String(selectedProject.name || "").toLowerCase()] || {};
+
     useEffect(
         () => {
             fetch("https://api.github.com/users/SunberryBlossom/repos")
@@ -59,9 +64,9 @@ export default function PortfolioPage () {
         <>
             {showModal && selectedProject.id && createPortal(
                 <ProjectModal
-                    imageUrl={infoByRepoName[selectedProject.name.toLowerCase()].image ?? missingImage}
+                    imageUrl={selectedRepoInfo.image ?? missingImage}
                     title={String(selectedProject.name || "").replaceAll("-", " ")}
-                    text={infoByRepoName[selectedProject.name.toLowerCase()].text || "No description provided."}
+                    text={selectedRepoInfo.text || "No description provided."}
                     onClose={() => setShowModal(false)}
                     link={selectedProject.html_url}
                 />,
@@ -81,7 +86,7 @@ export default function PortfolioPage () {
                         <div className={styles.loadingContainer}>
                             <h2>Projects are being fetched...</h2>
                         </div>
-                    ) : data.filter(repo => repo.name !== "SunberryBlossom").filter(repo => repo.name !== "Portfolio").map(repo => (
+                    ) : featuredRepos.map(repo => (
                             <ProjectCard
                                 key={repo.id}
                                 onClick={() => {
@@ -90,14 +95,14 @@ export default function PortfolioPage () {
                                 }}
                                 title={String(repo.name).replaceAll("-", " ")}
                                 subtitle={repo.description}
-                                image={infoByRepoName[repo.name.toLowerCase()].image ?? missingImage}
+                                image={infoByRepoName[String(repo.name).toLowerCase()]?.image ?? missingImage}
                             />
                         ))
                     }
                 </div>
             </section>
             <section className={styles.section2}>
-                <img src={portfolioImage} className={styles.img} />
+                <img src={portfolioImage} className={styles.img} loading="lazy" decoding="async" />
                 <div className={styles.textContainer}>
                     <h2>
                         Want to see more?
@@ -108,7 +113,7 @@ export default function PortfolioPage () {
                     <Button
                         text=" On GitHub"
                         link="https://github.com/SunberryBlossom"
-                        icon={["fa-brands", "fa-github"]}
+                        icon={faGithub}
                         style={{boxShadow: "3px 3px 3px rgba(0, 0, 0, 0.4)", backgroundColor: "var(--tertiary-color)"}}
                     />
                 </div>

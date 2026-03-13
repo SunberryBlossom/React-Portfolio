@@ -24,6 +24,8 @@ export default function AboutSection () {
                 <img
                     src={aboutImage}
                     className={styles.img}
+                    loading="lazy"
+                    decoding="async"
                 />
             </div>
         </section>
