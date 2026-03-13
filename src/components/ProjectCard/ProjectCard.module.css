@@ -9,6 +9,7 @@ position: relative;
     align-items: flex-end;
     justify-content: center;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
 }
 
 .card:focus-visible {
@@ -40,4 +41,12 @@ position: relative;
     border-radius: 0 0 10px 10px;
     background-color: rgba(0, 0, 0, 0.6);
     border-top: 1px solid var(--ink);
+}
+
+@media screen and (min-width: 1024px) {
+    .card:hover {
+        transform: scale(1.1);
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+    }
 }

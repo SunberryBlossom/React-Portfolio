@@ -89,7 +89,7 @@ export default function ResumePage () {
                     </div>
                 </article>
             </section>
-            <section className={styles.atsSection}>
+            <section className={styles.atsSection} id="resume-ats-section">
                 <div>
                     <h2>ATS-friendly resumes</h2>
                     <div className={styles.atsContainer}>
@@ -98,7 +98,7 @@ export default function ResumePage () {
                     </div>
                 </div>
             </section>
-            <section className={styles.contactSection}>
+            <section className={styles.contactSection} id="resume-contact-section">
                 <h2 className={styles.contactTitle}>
                         Want to start something great?
                 </h2 >

@@ -54,3 +54,28 @@
     left: 0;
     top: -7px;
 }
+
+@media screen and (min-width: 728px) {
+    .link {
+        font-size: 1.5rem;
+        padding: 0 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+     .navbar {
+        width: 100%;
+    }
+
+    .link {
+        font-size: 2rem;
+    }
+
+    .link:hover {
+        color: var(--secondary-accent-color);
+    }
+
+    .navbar::before {
+        display: none;
+    }
+}

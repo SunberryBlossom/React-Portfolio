@@ -3,8 +3,10 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Button from "../Button/Button";
 import styles from './PortfolioPage.module.css'
+import ProjectModal from "../ProjectModal/ProjectModal.jsx"
 
 export default function PortfolioPage () {
+
     return (
         <>
             <Header />
@@ -21,8 +23,7 @@ export default function PortfolioPage () {
                         title="Munilytics"
                         subtitle="Kolada-API based ROLAP"
                         image="src/assets/munilytics-card.png"
-
-                    />
+                        />
                     <ProjectCard
                         title="The Seer"
                         subtitle="Console based fortune telling"

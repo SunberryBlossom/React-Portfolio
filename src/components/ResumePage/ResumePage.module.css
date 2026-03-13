@@ -12,7 +12,7 @@
 }
 
 .resume {
-    padding: 20px;
+    padding: 40px;
     font-size: 1.2rem;
     color: var(--ink);
     justify-items: center;
@@ -187,4 +187,47 @@
 .contactTitle {
     font-size: 1.2rem;
     color: var(--ink);
+}
+
+@media screen and (min-width: 728px) {
+    .resume {
+        position: relative;
+        grid-template-areas:
+            "title title"
+            "header profile"
+            "header education"
+            "header ."
+            "work work";
+        grid-template-columns: 1fr 2fr;
+        column-gap: 10px;
+        row-gap: 10px;
+        align-items: start;
+    }
+
+    .education {
+        width: 100%;
+    }
+
+    .educationContainer, .workContainer {
+    gap: 20px;
+    }
+
+    .img {
+        padding-bottom: 7px;
+    }
+
+    .workContainer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 30px 0px;
+}
+
+    .workGridItem {
+        max-width: 50%;
+        gap: 0px;
+        padding: 0 100px;
+    }
+
 }
