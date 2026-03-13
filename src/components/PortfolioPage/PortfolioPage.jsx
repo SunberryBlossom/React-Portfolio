@@ -41,11 +41,6 @@ export default function PortfolioPage () {
             {
                 image : lordsOfArdaCard,
                 text : "The first ever collaborative project I ever participated in. Started out of my love for Tolkien. My biggest role in this was as Agile leader, leading standups, retros and making sure every peer that participated felt included and had a task to work on."
-            },
-        "react-portfolio":
-            {
-                image: missingImage,
-                text: "This project is my personal React portfolio, built with Vite and deployed through GitHub Pages. It includes route-based sections for about, portfolio, resume, and contact, with an emphasis on responsive design and accessibility."
             }
     };
 
