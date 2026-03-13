@@ -5,6 +5,7 @@ import Resume from "./resume.json";
 import styles from "./ResumePage.module.css";
 import cvEnglish from "../../assets/cv-elvira-mariesdotter-eng.pdf";
 import cvSwedish from "../../assets/cv-elvira-mariesdotter-swe.pdf";
+import resumeImage from "../../assets/resume-image.jpeg";
 import { useState } from "react";
 
 export default function ResumePage () {
@@ -42,7 +43,7 @@ export default function ResumePage () {
                     />
                 </div>
                 <article className={styles.header}>
-                    <img className={styles.img} src="src/assets/resume-image.jpeg" />
+                    <img className={styles.img} src={resumeImage} />
                     <div className={styles.headerTextContainer}>
                         <h2 className={styles.headerTitle}>
                             {data.header.name}

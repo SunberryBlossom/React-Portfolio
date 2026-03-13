@@ -9,6 +9,7 @@ import theSeerCard from "../../assets/the-seer-card.png";
 import slavaBankCard from "../../assets/slava-bank-card.png";
 import lordsOfArdaCard from "../../assets/lords-of-arda-card.jpg"
 import missingImage from "../../assets/missing-project-image.jpg"
+import portfolioImage from "../../assets/portfolio-image.jpg";
 import { createPortal } from "react-dom";
 import ProjectModal from "../ProjectModal/ProjectModal";
 
@@ -96,7 +97,7 @@ export default function PortfolioPage () {
                 </div>
             </section>
             <section className={styles.section2}>
-                <img src="/src/assets/portfolio-image.jpg" className={styles.img} />
+                <img src={portfolioImage} className={styles.img} />
                 <div className={styles.textContainer}>
                     <h2>
                         Want to see more?

@@ -1,6 +1,7 @@
 import styles from './HeroSection.module.css';
 import Button from '../Button/Button.jsx'
 import { useNavigate } from 'react-router';
+import heroImage from '../../assets/hero-image.png';
 
 export default function HeroSection () {
     const navigate = useNavigate();
@@ -9,7 +10,7 @@ export default function HeroSection () {
         <section id="main-content" className={styles.section}>
             <div className={styles.imageSection}>
                 <div className={styles.imageContainer}>
-                    <img className={styles.img} src="src/assets/hero-image.png" />
+                    <img className={styles.img} src={heroImage} />
                 </div>
             </div>
             <div className={styles.content}>

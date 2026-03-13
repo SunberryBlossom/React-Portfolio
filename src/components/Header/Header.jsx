@@ -1,6 +1,7 @@
 import styles from './Header.module.css';
 import Navbar from '../Navbar/Navbar.jsx'
 import { useEffect, useState } from 'react';
+import coinIcon from '../../assets/coin_icon.png';
 
 export default function Header () {
     const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('theme') === 'ithildin');
@@ -20,7 +21,7 @@ export default function Header () {
             <div className={styles.logoContainer}>
                 <img
                     className={`${styles.img} ${isDarkMode ? styles.darkmodeImg : ''}`.trim()}
-                    src="src/assets//coin_icon.png"
+                    src={coinIcon}
                     alt="Toggle color theme"
                     onClick={toggleTheme}
                 />

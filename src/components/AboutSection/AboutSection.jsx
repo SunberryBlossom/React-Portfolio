@@ -1,4 +1,5 @@
 import styles from './AboutSection.module.css';
+import aboutImage from '../../assets/about-image.jpg';
 
 export default function AboutSection () {
     return (
@@ -21,7 +22,7 @@ export default function AboutSection () {
             </article>
             <div>
                 <img
-                    src='/src/assets/about-image.jpg'
+                    src={aboutImage}
                     className={styles.img}
                 />
             </div>
