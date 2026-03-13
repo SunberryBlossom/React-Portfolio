@@ -54,3 +54,45 @@
 .p {
     font-size: 1.1rem;
 }
+
+.section:hover span {
+        color: var(--secondary-accent-color);
+    }
+
+.section span {
+     transition: all 0.4s ease;
+}
+
+@media screen and (min-width: 1024px) {
+    .section {
+        display: grid;
+        grid-template-areas:
+            'text image'
+            'button image';
+        justify-items: center;
+        align-items: center;
+        height: 85vh;
+        padding: 25px 40px;
+    }
+
+    .imageContainer {
+        grid-area: image;
+    }
+
+    .content {
+        grid-area: text;
+    }
+
+    .content Button {
+        grid-area: button;
+        cursor: pointer;
+    }
+
+    .h1 {
+        font-size: 3rem;
+    }
+
+      .p {
+        font-size: 2rem;
+    }
+}

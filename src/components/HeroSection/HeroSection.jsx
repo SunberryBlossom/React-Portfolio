@@ -11,7 +11,7 @@ export default function HeroSection () {
             </div>
             <div className={styles.content}>
             <h1 className={styles.h1}>
-                Mae Govannen! Call me Vira
+                Mae Govannen! Call me <span>Vira</span>
             </h1>
             <p className={styles.p}>
                 A .NET fullstack system developer based in Stockholm, Sweden, with an obsession for data-intensive applications.
