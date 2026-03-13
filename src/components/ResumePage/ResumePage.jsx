@@ -5,17 +5,42 @@ import Resume from "./resume.json";
 import styles from "./ResumePage.module.css";
 import cvEnglish from "../../assets/cv-elvira-mariesdotter-eng.pdf";
 import cvSwedish from "../../assets/cv-elvira-mariesdotter-swe.pdf";
+import { useState } from "react";
 
 export default function ResumePage () {
-    const data = Resume.english;
+    const [language, setLanguage] = useState("english");
+    const isEnglish = language === "english";
+    const data = Resume[language];
+
+    const labels = {
+        resume: isEnglish ? "Resume" : "CV",
+        education: isEnglish ? "education" : "utbildning",
+        workExperience: isEnglish ? "work experience" : "arbetslivserfarenhet",
+        atsFriendly: isEnglish ? "ATS-friendly resumes" : "ATS-vanliga CV:n",
+        atsEnglishButton: isEnglish ? "EN version" : "Engelsk version",
+        atsSwedishButton: isEnglish ? "SW version" : "Svensk version",
+        contactTitle: isEnglish ? "Want to start something great?" : "Vill du starta något riktigt bra?",
+        phoneMe: isEnglish ? " Phone me!" : " Ring mig!",
+        dmMe: isEnglish ? " DM me!" : " Skriv till mig!",
+        emailMe: isEnglish ? " Email me!" : " Maila mig!",
+        toggleLanguageButton: isEnglish ? " På svenska" : " In English"
+    };
 
     return (
         <>
             <Header />
             <section id="main-content" className={styles.resume}>
-                <h1 className={styles.title}>
-                    {data.profile.title == "profile" ? "Resume" : "CV"}
-                </h1>
+                <div className={styles.titleRow}>
+                    <h1 className={styles.title}>
+                        {labels.resume}
+                    </h1>
+                    <Button
+                        text={labels.toggleLanguageButton}
+                        icon="fa-solid fa-language"
+                        style={{ padding: "8px 12px", fontSize: "0.9rem" }}
+                        onClick={() => setLanguage(isEnglish ? "swedish" : "english")}
+                    />
+                </div>
                 <article className={styles.header}>
                     <img className={styles.img} src="src/assets/resume-image.jpeg" />
                     <div className={styles.headerTextContainer}>
@@ -29,9 +54,9 @@ export default function ResumePage () {
                     <ul className={styles.headerList}>
                         {
                             data.header["personal info"]
-                            .map((item) => {
+                            .map((item, index) => {
                                 return (
-                                    <li>
+                                    <li key={index}>
                                         {item.isLink ? <a className={styles.a} target="_blank" href={item.link}>{item.content}</a> : item.content}
                                     </li>
                                 )
@@ -49,7 +74,7 @@ export default function ResumePage () {
                 </article>
                 <article className={styles.education}>
                     <h2 className={styles.h2}>
-                        education
+                        {labels.education}
                     </h2>
                     <div className={styles.educationContainer}>
                         {data.education.map((education, index) => (
@@ -69,7 +94,7 @@ export default function ResumePage () {
                 </article>
                 <article className={styles.work}>
                     <h2 className={styles.h2}>
-                        work experience
+                        {labels.workExperience}
                     </h2>
                     <div className={styles.workContainer}>
                         {data["work experience"].map((work, index) => (
@@ -97,21 +122,21 @@ export default function ResumePage () {
             </section>
             <section className={styles.atsSection} id="resume-ats-section">
                 <div>
-                    <h2>ATS-friendly resumes</h2>
+                    <h2>{labels.atsFriendly}</h2>
                     <div className={styles.atsContainer}>
-                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon="fa-solid fa-briefcase" text="EN version" link={cvEnglish} />
-                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon="fa-solid fa-briefcase" text="SW version" link={cvSwedish} />
+                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon="fa-solid fa-briefcase" text={labels.atsEnglishButton} link={cvEnglish} />
+                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon="fa-solid fa-briefcase" text={labels.atsSwedishButton} link={cvSwedish} />
                     </div>
                 </div>
             </section>
             <section className={styles.contactSection} id="resume-contact-section">
                 <h2 className={styles.contactTitle}>
-                        Want to start something great?
+                        {labels.contactTitle}
                 </h2 >
                 <div className={styles.contactButtonContainer}>
-                    <Button text=" Phone me!" icon="fa-solid fa-phone" link="tel:+46709421135" />
-                    <Button text=" DM me!" icon="fa-solid fa-comment" link="https://www.linkedin.com/in/elviramariesdotter" />
-                    <Button text=" Email me!" icon="fa-solid fa-envelope" link="mailto:wooden_anemone@pm.me" />
+                    <Button text={labels.phoneMe} icon="fa-solid fa-phone" link="tel:+46709421135" />
+                    <Button text={labels.dmMe} icon="fa-solid fa-comment" link="https://www.linkedin.com/in/elviramariesdotter" />
+                    <Button text={labels.emailMe} icon="fa-solid fa-envelope" link="mailto:wooden_anemone@pm.me" />
                 </div>
             </section>
             <Footer />
