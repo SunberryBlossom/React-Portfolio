@@ -3,6 +3,8 @@ import Button from "../Button/Button";
 import Footer from "../Footer/Footer";
 import Resume from "./resume.json";
 import styles from "./ResumePage.module.css";
+import cvEnglish from "../../assets/cv-elvira-mariesdotter-eng.pdf";
+import cvSwedish from "../../assets/cv-elvira-mariesdotter-swe.pdf";
 
 export default function ResumePage () {
     const data = Resume.english;
@@ -93,8 +95,8 @@ export default function ResumePage () {
                 <div>
                     <h2>ATS-friendly resumes</h2>
                     <div className={styles.atsContainer}>
-                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon="fa-solid fa-briefcase" text="EN version" />
-                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon="fa-solid fa-briefcase" text="SW version" />
+                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon="fa-solid fa-briefcase" text="EN version" link={cvEnglish} />
+                        <Button style={{boxShadow: "rgba(0, 0, 0, 0.4) 3px 3px 3px", backgroundColor: "var(--tertiary-color)", padding: "10px 10px"}} icon="fa-solid fa-briefcase" text="SW version" link={cvSwedish} />
                     </div>
                 </div>
             </section>
@@ -103,9 +105,9 @@ export default function ResumePage () {
                         Want to start something great?
                 </h2 >
                 <div className={styles.contactButtonContainer}>
-                    <Button text=" Phone me!" icon="fa-solid fa-phone" />
-                    <Button text=" DM me!" icon="fa-solid fa-comment" />
-                    <Button text=" Email me!" icon="fa-solid fa-envelope" />
+                    <Button text=" Phone me!" icon="fa-solid fa-phone" link="tel:+46709421135" />
+                    <Button text=" DM me!" icon="fa-solid fa-comment" link="https://www.linkedin.com/in/elviramariesdotter" />
+                    <Button text=" Email me!" icon="fa-solid fa-envelope" link="mailto:wooden_anemone@pm.me" />
                 </div>
             </section>
             <Footer />
