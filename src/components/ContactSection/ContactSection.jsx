@@ -11,18 +11,22 @@ export default function ContactSection () {
                 <Button
                     style={{width: '170px', padding: '10px'}}
                     text="Mail"
+                    link="mailto:wooden_anemone@pm.me"
                 />
                 <Button
                     style={{width: '170px', padding: '10px'}}
                     text="LinkedIn"
+                    link="https://www.linkedin.com/in/elviramariesdotter"
                 />
                 <Button
                     style={{width: '170px', padding: '10px'}}
                     text="Phone"
+                    link="tel:+46709421135"
                 />
                 <Button
                     style={{width: '170px', padding: '10px'}}
                     text="GitHub"
+                    link="https://github.com/SunberryBlossom"
                 />
             </div>
         </section>

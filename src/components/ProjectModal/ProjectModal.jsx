@@ -1,14 +1,14 @@
 import Styles from "./ProjectModal.module.css"
 import Button from "../Button/Button";
 
-export default function ProjectModal ({imageUrl, title, text}) {
+export default function ProjectModal ({imageUrl, title, text, onClose, link}) {
 
     return (
-        <div className={Styles.overlay}>
-            <div className={Styles.modal}>
+        <div className={Styles.overlay} onClick={onClose}>
+            <div className={Styles.modal} onClick={(event) => event.stopPropagation()}>
                 <div className={Styles.topSection}>
                     <img className={Styles.img} src={imageUrl} />
-                    <button className={Styles.closeButton}>+</button>
+                    <button onClick={onClose} className={Styles.closeButton}>+</button>
                 </div>
                 <div className={Styles.middleSection}>
                     <div className={Styles.header}>
@@ -21,6 +21,7 @@ export default function ProjectModal ({imageUrl, title, text}) {
                 </div>
                 <div className={Styles.bottomSection}>
                     <Button
+                        link={link}
                         style={{
                             boxShadow: "3px 3px 3px rgba(0, 0, 0, 0.4)",
                             backgroundColor: "var(--tertiary-color)"
